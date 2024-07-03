@@ -33,4 +33,10 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     avg_yearly_salary DESC;
 
--- use chatGPT to analyze the results and paste some insights here
+/*
+Here's the breakdown of the most demanded skills for software engineers in 2023, based on the 10 highest palying job postings:
+MongoDB is leading with a high count of 6.
+Python, JavaScript, and React closely follow with a count of 5.
+TypeScript and AWS are next with a count of 5
+Other skills show lower levels of demand with only 1 or 2 listings in the top 10 requiring them.
+*/

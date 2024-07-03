@@ -55,7 +55,6 @@ ORDER BY
 LIMIT 25;
 
 
-
 --rewritten more concisely
 SELECT
     skills_dim.skill_id,
@@ -78,4 +77,16 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 
--- use chatGPT to analyze the results and paste some insights here
+/*
+Here's a breakdown of the most optimal skills for software engineers in 2023: 
+
+1. Cloud Dominance: AWS stands out with high demand and salaries, emphasizing cloud expertise.
+
+2. Language Versatility: Python and Go demonstrate strong market value across diverse applications.
+
+3. Specialized Technologies: Kafka and Snowflake show high salaries due to their niche roles in data management.
+
+4. Frontend Leadership: React and TypeScript lead in frontend development, commanding competitive salaries.
+
+5. Backend Stability: Node.js maintains high salaries despite moderate demand, crucial for backend roles.
+*/
