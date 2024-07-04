@@ -4,7 +4,7 @@ Question: What are the top-paying software engineer jobs?
 - Focuses on job postings with specified salaries (remove nulls)
 - Include company names of top 10 roles
 - Omit seniority levels (e.g., Senior, Lead, Principal, Manager, Director, Sr)
-- Why? Highlight the top-paying opportunities for software engineers, offering insights into employment options and location flexibility.
+- Why? Highlight the top-paying opportunities for software engineers, offering insights into employment options with high earning potential.
 */
 
 SELECT

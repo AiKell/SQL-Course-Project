@@ -3,7 +3,7 @@ Answer: What are the most optimal skills to learn (aka it’s in high demand and
 - Identify skills in high demand and associated with high average salaries for software engineer roles
 - Concentrates on remote positions with specified salaries
 - Why? Targets skills that offer job security (high demand) and financial benefits (high salaries), 
-    offering strategic insights for career development in data analysis
+  offering strategic insights for career development in software engineering
 */
 
 --CTE based on query 3
@@ -80,16 +80,27 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 
-/* REWRITE THIS
+/*
 Here's a breakdown of the most optimal skills for software engineers in 2023: 
 
-1. Cloud Dominance: AWS stands out with high demand and salaries, emphasizing cloud expertise.
+- High Salary Skills with Moderate Demand: TypeScript, with an average salary of $142,472 and a demand count 
+  of 15, and Golang, with an average salary of $141,013 and a demand count of 12, offer some of the highest salaries 
+  in the industry. Despite their moderate demand, these skills can significantly boost earning potential for software 
+  engineers who specialize in them.
 
-2. Language Versatility: Python and Go demonstrate strong market value across diverse applications.
+- Balanced Demand and Competitive Salary: C++ and Go show a good balance between demand and salary. C++ has a demand count 
+  of 32 and an average salary of $134,176, while Go has a demand count of 42 and an average salary of $132,854. These skills 
+  are highly sought after and offer competitive compensation.
 
-3. Specialized Technologies: Kafka and Snowflake show high salaries due to their niche roles in data management.
+- Emerging Technologies: Skills like Snowflake and Airflow are becoming increasingly important. Snowflake has a demand count 
+  of 17 and an average salary of $126,339, whereas Airflow has a demand count of 13 and an average salary of $122,265. 
+  These tools are gaining traction in data engineering and analytics.
 
-4. Frontend Leadership: React and TypeScript lead in frontend development, commanding competitive salaries.
+- Popular Programming Languages: Python and JavaScript continue to be in high demand. Python, with a demand count of 131 and 
+  an average salary of $113,243, and JavaScript, with a demand count of 44 and an average salary of $109,900, remain essential 
+  for software development, offering numerous job opportunities.
 
-5. Backend Stability: Node.js maintains high salaries despite moderate demand, crucial for backend roles.
+- Specialized Skills: Technologies like TensorFlow (demand count 25, average salary $116,875) and Jenkins (demand count 11, average salary $115,450) 
+  highlight the importance of specialized skills in machine learning and continuous integration/continuous deployment (CI/CD) for modern software 
+  engineering roles. 
 */

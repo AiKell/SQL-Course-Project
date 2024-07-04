@@ -28,7 +28,7 @@ For my deep dive into the software engineering job market, I took advantage of s
 - **Python, Pandas, & Seaborn:** Used to help visualize data returned from queries. 
 
 # The Analysis
-Each query for this project aimed at investigating specific aspects of the software engineering job market. In particular, I focused on non-senior-level positions, as that is what I'm currently interested in. Here’s how I approached each question:
+Each query for this project aimed at investigating specific aspects of the software engineering job market. In particular, I focused on non-senior level positions, as that is what I'm currently interested in. Here’s how I approached each question:
 
 ## 1. Top Paying Software Engineer Jobs
 To identify the highest-paying roles, I filtered software engineering positions by average yearly salary and location. This query highlights the high paying opportunities in the field.
@@ -52,7 +52,7 @@ ORDER BY
     avg_yearly_salary DESC
 LIMIT 10;
 ```
-Here's the breakdown of the top software engineering jobs in 2023:
+Here's the breakdown of the top 10 paying software engineering jobs:
 
 - **Global Demand:** There is a significant global demand for professionals in software engineering, as evidenced by positions located in Russia, Australia, Spain, Switzerland, and the United States. Having 5 different countries represented in the 10 highest paying jobs suggests that international jobs can be very lucrative. 
 - **Diverse Roles:** The job postings also illustrate a diversity of specialized roles within the software engineering field. Examples include "Staff Software Engineer - MLOps", focusing on machine learning operations, and "Computer Vision Engineer", emphasizing expertise in computer vision technologies. This diversity reflects the varied and specialized nature of opportunities available in the global job market.
@@ -93,10 +93,12 @@ ORDER BY
     avg_yearly_salary DESC;
 ```
 
-Here's the breakdown of the most demanded skills for software engineers in 2023, based on the 10 highest palying job postings:
+Here's an overview of the most demanded skills for software engineers, based on the 10 highest palying job postings:
 
 - **Python** and **Go** are leading with a high count of 5.
+
 - **C++** closely follows with a count of 4 and **AWS** is right behind with a count of 3.
+
 - Other skills show lower levels of demand with only 1 or 2 listings in the top 10 requiring them. Among these are programming languages like **C#** and **Ruby**, as well as machine learning frameworks like **TensorFlow** and **PyTorch**.
 
 ![Top paying job skills](/assets/2_skill_frequency_histogram.png)
@@ -123,11 +125,14 @@ ORDER BY
     demand_count DESC
 LIMIT 10;
 ```
-Here's the breakdown of the most demanded skills for software engineers in 2023:
 
-- **Python Dominance**: Python leads the demand, indicating its critical role in software development, particularly in data science, automation, and web development.
-  
-- **Cloud and DevOps Skills**: Skills like AWS, Azure, Kubernetes, Docker, and Git show a strong emphasis on cloud computing and DevOps practices, highlighting the importance of infrastructure management and deployment automation in modern software engineering roles.
+Here's the breakdown of the overall most demanded skills for software engineers:
+
+- **Python Dominance:** Python leads the demand, indicating its critical role in software development, particularly in data science, automation, and web development.
+
+- **SQL Proficiency:** SQL comes second in demand which underscores its importance in software engineering positions. 
+
+- **Cloud and DevOps Skills:** Skills like AWS, Azure, Kubernetes, Docker, and Git show a strong emphasis on cloud computing and DevOps practices, highlighting the importance of infrastructure management and deployment automation in modern software engineering roles.
 
 | Skill       | Demand Count |
 |-------------|--------------|
@@ -141,7 +146,8 @@ Here's the breakdown of the most demanded skills for software engineers in 2023:
 | Docker      | 3820         |
 | JavaScript  | 3196         |
 | Git         | 3048         |
-*Table of the demand for the top 10 skills in software engineering job postings*
+
+*Table of the demand for the top 5 skills in software engineering job postings*
 
 ## 4. Skills Based on Salary
 This query explores the average salaries associated with different skills, revealing which skills are the highest paying for software engineers.
@@ -189,7 +195,8 @@ These trends indicate that specialization in cutting-edge technologies, whether 
 | TypeScript     | $142,472       |
 | DB2            | $142,430       |
 
-*Table of the top-paying skills for software engineers based on average salary data. Shortened to the top 10 for brevity.*
+*Table of the top-paying skills for software engineers based on average salary data; shortened to the top 10 for brevity*
+
 
 ## 5. Most Optimal Skills to Learn
 
@@ -218,22 +225,57 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 ```
-PUT TABLE OR GRAPH HERE
 
-### Optimal Skills for Software Engineers in 2023
+Here's a summary of the most essential skills for software engineers to learn:
 
-Here's a breakdown of the most optimal skills for software engineers in 2023:
+- **High Salary Skills with Moderate Demand**: TypeScript, with an average salary of $142,472 and a demand count of 15, and Golang, with an average salary of $141,013 and a demand count of 12, offer some of the highest salaries in the industry. Despite their moderate demand, these skills can significantly boost earning potential for software engineers who specialize in them.
 
-1. **Cloud Dominance**: AWS stands out with high demand and salaries, emphasizing cloud expertise.
+- **Balanced Demand and Competitive Salary**: C++ and Go show a good balance between demand and salary. C++ has a demand count of 32 and an average salary of $134,176, while Go has a demand count of 42 and an average salary of $132,854. These skills are highly sought after and offer competitive compensation.
 
-2. **Language Versatility**: Python and Go demonstrate strong market value across diverse applications.
+- **Emerging Technologies**: Skills like Snowflake and Airflow are becoming increasingly important. Snowflake has a demand count of 17 and an average salary of $126,339, whereas Airflow has a demand count of 13 and an average salary of $122,265. These tools are gaining traction in data engineering and analytics.
 
-3. **Specialized Technologies**: Kafka and Snowflake show high salaries due to their niche roles in data management.
+- **Popular Programming Languages**: Python and JavaScript continue to be in high demand. Python, with a demand count of 131 and an average salary of $113,243, and JavaScript, with a demand count of 44 and an average salary of $109,900, remain essential for software development, offering numerous job opportunities.
 
-4. **Frontend Leadership**: React and TypeScript lead in frontend development, commanding competitive salaries.
+- **Specialized Skills**: Technologies like TensorFlow (demand count 25, average salary $116,875) and Jenkins (demand count 11, average salary $115,450) highlight the importance of specialized skills in machine learning and continuous integration/continuous deployment (CI/CD) for modern software engineering roles. 
 
-5. **Backend Stability**: Node.js maintains high salaries despite moderate demand, crucial for backend roles.
+| Skill      | Demand count | Average salary |
+|------------|--------------|----------------|
+| typescript | 15           | $142,472       |
+| golang     | 12           | $141,013       |
+| c++        | 32           | $134,176       |
+| go         | 42           | $132,854       |
+| snowflake  | 17           | $126,339       |
+| airflow    | 13           | $122,265       |
+| flow       | 14           | $119,684       |
+| tensorflow | 25           | $116,875       |
+| jenkins    | 11           | $115,450       |
+| jira       | 14           | $114,774       |
+| react      | 26           | $114,325       |
+| python     | 131          | $113,243       |
+| spark      | 35           | $112,207       |
+| terraform  | 12           | $111,575       |
+| linux      | 25           | $111,326       |
+| javascript | 44           | $109,900       |
+| c#         | 18           | $109,042       |
+| scala      | 18           | $108,593       |
+| kafka      | 25           | $108,576       |
+| aws        | 75           | $108,166       |
+| angular    | 15           | $105,599       |
+| excel      | 36           | $104,211       |
+| java       | 68           | $103,280       |
+| azure      | 47           | $103,008       |
+| pytorch    | 19           | $101,434       |
 
+*Table of the most optimal skills for software engineers sorted by salary*
+
+**Note:** The difference in demand count from `section 4` arises because a significant portion of job postings in the dataset do not include salary information. This observation is reflected in the table below, which outlines the distribution of available salary information across all job postings.
+
+|                                         | Has Yearly Salary Info (%) | Has Hourly Salary Info (%) | Has no Salary Info (%) | Number of Jobs |
+|-----------------------------------------|----------------------------|----------------------------|------------------------|----------------|
+| All jobs                                | 2.797                      | 1.354                      | 95.849                 | 787,686        |
+| Software Engineering (non-senior level) | 1.013                      | 0.256                      | 98.731                 | 30,493         |
+
+*Table showing the distribution of salary information in job postings*
 
 # What I leaned
 Throughout this experience, I have enhanced my SQL toolkit with advanced skills:
@@ -248,7 +290,16 @@ Throughout this experience, I have enhanced my SQL toolkit with advanced skills:
 ### Insights
 From the analysis, several general insights emerged:
 
+1. **Top-Paying Software Engineering Jobs**: The highest-paying jobs for software engineers at non-senior level positions are located all over the globe.
+
+2. **Skills for Top-Paying Jobs**: Python and Go emerge as leading skills in demand for high-paying software engineering roles, showcasing the importance of versatile programming languages in securing top-tier positions.
+
+3. **Most In-Demand Skills**: Python and SQL dominate as the most in-demand skills for software engineers, underscoring their foundational role across various software engineering roles.
+
+4. **Skills with Higher Salaries**: Skills like Ruby on Rails and Unity command exceptionally high average salaries, highlighting the financial rewards of specializing in specific frameworks and technologies.
+
+5. **Optimal Skills for Job Market Value**: TypeScript and Golang emerge as optimal skills to learn, balancing high average salaries with moderate demand, offering strategic opportunities for career growth in software engineering.
 
 ### Closing Thoughts
 
-Overall, I learned a great deal from this course 
+Throughout this project, I have not only enhanced my technical skills in SQL and data analysis but also gained deeper insights into the nuanced factors shaping career trajectories in software engineering. Mastering advanced SQL techniques, understanding the importance of data-driven decision-making, and navigating complex job market dynamics have been invaluable lessons that will guide my career development going forward.
