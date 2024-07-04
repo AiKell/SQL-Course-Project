@@ -6,9 +6,9 @@
 # Background
 After continuously job-searching and applying without success, I realized the importance of acquiring the data analytics skills frequently listed in job postings. Through this process, not only did I learn the necessary skills, but I also gained valuable insights into which skills are most beneficial to learn next.
 
-The data and project information comes from [Luke Barousse's SQL Course](https://lukebarousse.com/sql). This data consists of job postings from 2023 and contains insights on job titles, salaries, locations, and essential skills.
+The data and project information come from [Luke Barousse's SQL Course](https://lukebarousse.com/sql). This data consists of job postings from 2023 and contains insights on job titles, salaries, locations, and essential skills.
 
-### Acknowledgement of Bias
+### Acknowledgement of bias
 The dataset used in this analysis primarily consists of job postings that focus on data science roles. While this may introduce some bias, as the data might not fully capture the entire software engineering job market, the insights gained are still highly relevant. This is because many of the skills and trends identified in data science roles overlap with those in software engineering, reflecting broader industry demands and highlighting key areas for skill development.
 
 ### The questions I wanted to answer through my SQL queries were:
@@ -28,10 +28,10 @@ For my deep dive into the software engineering job market, I took advantage of s
 - **Python, Pandas, & Seaborn:** Used to help visualize data returned from queries. 
 
 # The Analysis
-Each query for this project aimed at investigating specific aspects of the software engineering job market. In particular, I focused on non-senior level positions, as that is what I'm currently interested in. Here’s how I approached each question:
+Each query for this project aimed at investigating specific aspects of the software engineering job market. In particular, I focused on non-senior level positions, which I'm currently interested in. Here’s how I approached each question:
 
 ## 1. Top Paying Software Engineer Jobs
-To identify the highest-paying roles, I filtered software engineering positions by average yearly salary and location. This query highlights the high paying opportunities in the field.
+To identify the highest-paying roles, I filtered software engineering positions by average yearly salary and location. This query highlights the high-paying opportunities in the field.
 
 ```sql
 SELECT
@@ -58,10 +58,10 @@ Here's the breakdown of the top 10 paying software engineering jobs:
 - **Diverse Roles:** The job postings also illustrate a diversity of specialized roles within the software engineering field. Examples include "Staff Software Engineer - MLOps", focusing on machine learning operations, and "Computer Vision Engineer", emphasizing expertise in computer vision technologies. This diversity reflects the varied and specialized nature of opportunities available in the global job market.
 
 ![Top paying roles](/assets/1_top_paying_jobs_histogram.png)
-*Bar graph visualizing the top 10 software engineering positions based on yearly salary; generated using python*
+*Bar graph visualizing the top 10 software engineering positions based on yearly salary; generated using Python*
 
 ## 2. Skills for Top Paying Jobs
-To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
+To understand what skills are required for top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
 
 ```sql
 WITH top_paying_jobs AS(
@@ -93,7 +93,7 @@ ORDER BY
     avg_yearly_salary DESC;
 ```
 
-Here's an overview of the most demanded skills for software engineers, based on the 10 highest palying job postings:
+Here's an overview of the most demanded skills for software engineers, based on the 10 highest-paying job postings:
 
 - **Python** and **Go** are leading with a high count of 5.
 
@@ -102,7 +102,7 @@ Here's an overview of the most demanded skills for software engineers, based on 
 - Other skills show lower levels of demand with only 1 or 2 listings in the top 10 requiring them. Among these are programming languages like **C#** and **Ruby**, as well as machine learning frameworks like **TensorFlow** and **PyTorch**.
 
 ![Top paying job skills](/assets/2_skill_frequency_histogram.png)
-*Bar graph visualizing the frequency of required skills among the top 10 highest paying software engineering postings; generated using python*
+*Bar graph visualizing the frequency of required skills among the top 10 highest paying software engineering postings; generated using Python*
 
 ## 3. In-Demand Skills for Software Engineers
 
@@ -228,7 +228,7 @@ LIMIT 25;
 
 Here's a summary of the most essential skills for software engineers to learn:
 
-- **High Salary Skills with Moderate Demand**: TypeScript, with an average salary of $142,472 and a demand count of 15, and Golang, with an average salary of $141,013 and a demand count of 12, offer some of the highest salaries in the industry. Despite their moderate demand, these skills can significantly boost earning potential for software engineers who specialize in them.
+- **High Salary Skills with Moderate Demand**: TypeScript, with an average salary of $142,472 and a demand count of 15, and Golang, with an average salary of $141,013 and a demand count of 12, offer some of the highest salaries in the industry. Despite their moderate demand, these skills can significantly boost the earning potential of software engineers who specialize in them.
 
 - **Balanced Demand and Competitive Salary**: C++ and Go show a good balance between demand and salary. C++ has a demand count of 32 and an average salary of $134,176, while Go has a demand count of 42 and an average salary of $132,854. These skills are highly sought after and offer competitive compensation.
 
@@ -277,10 +277,10 @@ Here's a summary of the most essential skills for software engineers to learn:
 
 *Table showing the distribution of salary information in job postings*
 
-# What I leaned
+# What I learned
 Throughout this experience, I have enhanced my SQL toolkit with advanced skills:
 
-- **🧩 Complex Query Crafting:** Mastering advanced SQL techniques, adeptly merging tables and utilizing WITH clauses for effective temporary table management.
+- **🧩 Complex Query Crafting:** Mastering advanced SQL techniques, adeptly merging tables, and utilizing WITH clauses for effective temporary table management.
 - **📊 Data Aggregation:** Proficiency in GROUP BY operations, utilizing aggregate functions like COUNT() and AVG() to summarize data effectively.
 - **💡 Analytical Expertise:** Strengthening my problem-solving abilities, transforming queries into actionable insights through strategic SQL formulation.
 
@@ -294,7 +294,7 @@ From the analysis, several general insights emerged:
 
 2. **Skills for Top-Paying Jobs**: Python and Go emerge as leading skills in demand for high-paying software engineering roles, showcasing the importance of versatile programming languages in securing top-tier positions.
 
-3. **Most In-Demand Skills**: Python and SQL dominate as the most in-demand skills for software engineers, underscoring their foundational role across various software engineering roles.
+3. **Most In-Demand Skills**: Python and SQL dominate as the most in-demand skills for software engineers, underscoring their foundational roles across various software engineering positions.
 
 4. **Skills with Higher Salaries**: Skills like Ruby on Rails and Unity command exceptionally high average salaries, highlighting the financial rewards of specializing in specific frameworks and technologies.
 
