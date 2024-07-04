@@ -18,6 +18,7 @@ WITH skills_demand AS(
     INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
     WHERE
         jpf.job_title_short = 'Software Engineer' AND
+        jpf.job_title !~* '(Senior|Lead|Principal|Manager|Director|Sr)' AND
         jpf.salary_year_avg IS NOT NULL
     GROUP BY
         skills_dim.skill_id
@@ -34,6 +35,7 @@ average_salary AS (
     INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
     WHERE
         jpf.job_title_short = 'Software Engineer' AND
+        jpf.job_title !~* '(Senior|Lead|Principal|Manager|Director|Sr)' AND
         jpf.salary_year_avg IS NOT NULL
     GROUP BY
         skills_dim.skill_id
@@ -67,6 +69,7 @@ INNER JOIN skills_job_dim ON jpf.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
     jpf.job_title_short = 'Software Engineer' AND
+    jpf.job_title !~* '(Senior|Lead|Principal|Manager|Director|Sr)' AND
     jpf.salary_year_avg IS NOT NULL
 GROUP BY
     skills_dim.skill_id
@@ -77,7 +80,7 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 
-/*
+/* REWRITE THIS
 Here's a breakdown of the most optimal skills for software engineers in 2023: 
 
 1. Cloud Dominance: AWS stands out with high demand and salaries, emphasizing cloud expertise.

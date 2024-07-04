@@ -3,7 +3,7 @@ Question: What skills are required for the top-paying software engineer jobs?
 - Use the top 10 highest-paying software engineer jobs from first query
 - Add the specific skills required for these roles
 - Why? It provides a detailed look at which high-paying jobs demand certain skills, 
-    helping job seekers understand which skills to develop that align with top salaries
+  helping job seekers understand which skills to develop that align with top salaries
 */
 WITH top_paying_jobs AS(
     SELECT
@@ -16,7 +16,7 @@ WITH top_paying_jobs AS(
     LEFT JOIN company_dim ON jpf.company_id = company_dim.company_id
     WHERE
         jpf.job_title_short = 'Software Engineer' AND
-        jpf.job_work_from_home = TRUE AND
+        jpf.job_title !~* '(Senior|Lead|Principal|Manager|Director|Sr)' AND
         jpf.salary_year_avg IS NOT NULL
     ORDER BY
         avg_yearly_salary DESC
@@ -35,8 +35,11 @@ ORDER BY
 
 /*
 Here's the breakdown of the most demanded skills for software engineers in 2023, based on the 10 highest palying job postings:
-MongoDB is leading with a high count of 6.
-Python, JavaScript, and React closely follow with a count of 5.
-TypeScript and AWS are next with a count of 5
-Other skills show lower levels of demand with only 1 or 2 listings in the top 10 requiring them.
+
+- Python and Go are leading with a high count of 5.
+
+- C++ closely follows with a count of 4 and AWS is right behind with a count of 3.
+
+- Other skills show lower levels of demand with only 1 or 2 listings in the top 10 requiring them. Among these are programming languages 
+  like C# and Ruby, as well as machine learning frameworks like TensorFlow and PyTorch.
 */
